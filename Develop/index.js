@@ -137,15 +137,30 @@ return inquirer.prompt([
 
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
+function writeFile(fileName, data) {
     fs.appendFile(`${fileName}.md`, data,
     (err) => err ? console.error(err) : console.log(`${fileName}.md created`))
 }
+/*const writeFile = fileContent => {
+  return new Promise((resolve, reject) => {
+    fs.writeFile('.Develop/utils/readMe.md', fileContent, err => {
+      if (err) {
+        reject(err);
+        return;
+      }
+
+      resolve({
+        ok: true,
+        message: 'File created!'
+      });
+    });
+  });
+};*/
 
 // TODO: Create a function to initialize app
 async function init() {
     let answers = await userInput();
-    writeToFile((answers.fileName),(generateMarkdown(answers)));
+    writeFile((answers.fileName),(generateMarkdown(answers)));
 }
 
 

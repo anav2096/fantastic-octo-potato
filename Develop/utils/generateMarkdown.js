@@ -41,6 +41,6 @@ function generateMarkdown(data) {
   ### Reach me here: 
   [${data.username}](https://github.com/${data.username})  
   ${data.email}`;
-}
+};
 
 module.exports = generateMarkdown;
