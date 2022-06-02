@@ -32,8 +32,7 @@ function generateMarkdown(data) {
   ${data.install}
   ## Usage
   ${data.usage}
-  ## How to Contribute
-  [Contributor Covenant](https://www.contributor-covenant.org/)  
+  ## How to Contribute 
   ${data.contributing}
   ## Tests
   ${data.testing}
